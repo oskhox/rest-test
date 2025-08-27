@@ -27,7 +27,7 @@ public class ApiRequest {
         con.setRequestMethod("GET");
         con.connect();
 
-        //3. hämta all data, skapa objekt en efter en, spara i databasen en efter en
+        //3. hämta all data, skapa objekt en efter en och lägg i array, spara i databasen en efter en
         try (BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()))) {
             StringBuilder sb = new StringBuilder();
             String line;
