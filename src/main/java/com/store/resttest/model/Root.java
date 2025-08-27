@@ -1,5 +1,6 @@
 package com.store.resttest.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,6 +11,7 @@ public class Root {
     private int id;
     private String title;
     private double price;
+    @Column(columnDefinition = "TEXT") // så att MySQL tillåter längre strängar
     private String description;
     private String category;
     private String image;
