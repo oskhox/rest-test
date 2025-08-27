@@ -22,9 +22,12 @@ public class ProductController {
         this.apiRequest = apiRequest;
     }
 
-    @GetMapping("/fetch")
+    //Hämta alla
+    @GetMapping("/fetch/all")
     public ResponseEntity<List<Root>> fetchProducts() throws Exception {
         apiRequest.fetchAndSaveProducts();
         return ResponseEntity.ok().body(productRepository.findAll());
     }
+
+    //TODO: För att hämta en produkt, uppdatera en produkt, skapa ny produkt, ta bort produkt ha service-klass och endpoints
 }
